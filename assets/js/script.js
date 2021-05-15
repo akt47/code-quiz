@@ -21,47 +21,40 @@ var buttonD = document.getElementById("d");
 
 // Quiz question object
 var quizQuestions = [{
-    question: "How many elements can you apply an 'ID' attribute to?",
-    choiceA: "As many as you want",
-    choiceB: "3",
-    choiceC: "1",
-    choiceD: "128",
+    question: "Commonly used data types DO NOT include:",
+    choiceA: "strings",
+    choiceB: "booleans",
+    choiceC: "alerts",
+    choiceD: "numbers",
     correctAnswer: "c"},
   {
-    question: "What does DOM stand for?",
-    choiceA: "Document Object Model",
-    choiceB: "Display Object Management",
-    choiceC: "Digital Ordinance Model",
-    choiceD: "Desktop Oriented Mode",
-    correctAnswer: "a"},
+    question: "The condition in an if / else statement is enclosed within ____.",
+    choiceA: "quotes",
+    choiceB: "curly brackets",
+    choiceC: " parentheses",
+    choiceD: "square brackets",
+    correctAnswer: "d"},
    {
-    question: "What is used primarily to add styling to a web page?",
-    choiceA: "HTML",
-    choiceB: "CSS",
-    choiceC: "Python",
-    choiceD: "React.js",
-    correctAnswer: "b"},
-    {
-    question: "What HTML tags are JavaScript code wrapped in?",
-    choiceA: "&lt;div&gt;",
-    choiceB: "&lt;link&gt;",
-    choiceC: "&lt;head&gt;",
-    choiceD: "&lt;script&gt;",
+    question: "Arrays in Javascript can be used to store ____.?",
+    choiceA: "numbers and strings",
+    choiceB: " other arrays",
+    choiceC: "booleans",
+    choiceD: "all of the above",
     correctAnswer: "d"},
     {
-    question: "When is localStorage data cleared?",
-    choiceA: "No expiration time",
-    choiceB: "On page reload",
-    choiceC: "On browser close",
-    choiceD: "On computer restart",
-    correctAnswer: "a"},  
+    question: "String values must be enclosed within ____ when being assigned to variables.",
+    choiceA: "commas",
+    choiceB: "curly brackets;",
+    choiceC: "parentheses",
+    choiceD: "quotes",
+    correctAnswer: "d"},
     {
-    question: "What does WWW stand for?",
-    choiceA: "Web World Workings",
-    choiceB: "Weak Winter Wind",
-    choiceC: "World Wide Web",
-    choiceD: "Wendy Wants Waffles",
-    correctAnswer: "c"},
+    question: "A very useful tool for used during development and debugging for printing content to the debugger is:",
+    choiceA: "JavaScript",
+    choiceB: "terminal/bash",
+    choiceC: "for loops",
+    choiceD: "console log",
+    correctAnswer: "a"},  
     {
     question: "What HTML attribute references an external JavaScript file?",
     choiceA: "href",
@@ -199,15 +192,18 @@ function checkAnswer(answer){
 
     if (answer === correct && currentQuestionIndex !== finalQuestionIndex){
         score++;
-        alert("That Is Correct!");
         currentQuestionIndex++;
         generateQuizQuestion();
         //display in the results div that the answer is correct.
+
     }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
-        alert("That Is Incorrect.")
+       
+        timeLeft -=10;
         currentQuestionIndex++;
         generateQuizQuestion();
         //display in the results div that the answer is wrong.
+        
+
     }else{
         showScore();
     }
