@@ -29,3 +29,8 @@ h1 {
     border-radius: 20px;
 
 }
+
+#runTimer:hover {
+    background-color: lightpink;
+    color:white;
+}

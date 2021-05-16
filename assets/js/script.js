@@ -36,5 +36,41 @@ var questions = [
 ];
 
 // set variables
-var score = 0;
+// question deck 
 var questionDeck= 0;
+// starting score 
+var score = 0;
+//remove time if answer incorrect
+var timePenalty = 10;
+//initial timer
+var timer = 100;
+var timeRemain = 0;
+//answer selection
+var choicesListEl = document.querySelector("#answerSelect");
+//wrong or correct display
+var choiceResultEl = document.querySelector("#resultDisplay");
+//holds time intervals
+var timeKeeper;
+
+//Show first question
+
+function quizSet() {
+    //restarts data
+    document.getElementById("quizDiv").innerHTML="";
+    choicesListEl.innerHTML = "";
+}
+
+document.getElementById("runTimer").addEventListener("click", function () {
+    timeKeeper = setInterval(function () {
+        document.getElementById("displayTimer").innerHTML = "Time:" + timer;
+        timer--;
+
+        if (timer === 0) {
+            document.getElementById("displayTimer").innerHTML = "No More Time!";
+            clearInterval(timeKeeper);
+            setTimeout(quizFinished, 1000);
+        }
+
+    }, 1000);
+    quizSet(questionDeck);
+});
