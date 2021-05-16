@@ -83,7 +83,7 @@ function quizSet() {
          var listChoice = document.createElement("li");
          var anChoice = document.createElement("button");
          anChoice.textContent = choices[i];
-        /* anChoice.className = "btn btn-lg";*/
+         anChoice.className = ".anButton";
          listChoice.appendChild(anChoice);
          choicesListEl.appendChild(listChoice);
 
