@@ -1,0 +1,25 @@
+#high-score-list {
+    float: left;
+    padding: 10px;
+}
+
+#timer {
+    float: right; 
+    padding: 10px;
+}
+
+#quizDiv {
+    height: 400px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin-right: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+   
+}
