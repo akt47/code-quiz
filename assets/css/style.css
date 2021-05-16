@@ -8,16 +8,20 @@
     padding: 10px;
 }
 
-#quizDiv {
+#container{
     height: 400px;
     position: absolute;
     top: 30%;
     left: 30%;
     margin-right: 100px;
 }
+#quizDiv {
+  margin: 20px;
+}
 
 h1 {
     text-align: center;
+    font-weight: bold;
 }
 
 #runTimer {
@@ -34,3 +38,15 @@ h1 {
     background-color: lightpink;
     color:white;
 }
+
+.question {
+    text-align: left;
+    font-weight: bold;
+}
+
+#answerSelect {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
