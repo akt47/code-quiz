@@ -65,3 +65,21 @@ li button {
     color: white;
 }
 
+li button:hover {
+    border-radius: 10px;
+    background-color: lightpink;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 30%;
+    font-size: 23px;
+    color: white;
+}
+
+.answerCheck {
+    border-top: 2px solid #afafaf;
+    text-align: left;
+    font-size: 2rem;
+    font-style: italic;
+    color: #afafaf;
+    padding-top: 8px;
+}

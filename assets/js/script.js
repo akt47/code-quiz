@@ -83,10 +83,41 @@ function quizSet() {
          var listChoice = document.createElement("li");
          var anChoice = document.createElement("button");
          anChoice.textContent = choices[i];
-         anChoice.className = ".anButton";
+         anChoice.className = "li button";
          listChoice.appendChild(anChoice);
          choicesListEl.appendChild(listChoice);
 
      }
 };
+
+//check answer for correct or wrong display
+function checkAnswer(event) {
+    choiceResultEl.classList.add('answerCheck');
+    if (event.target.matches("button")) {
+         var answer = event.target.textContent;
+         if (answer === questions[questionDeck].answer) {
+            choiceResultEl.textContent = "Correct!";
+              score++;
+         } else {
+            choiceResultEl.textContent = "Wrong!";
+              timer-=10;
+         }
+    }
+
+    setTimeout(nQuestion, 1500);
+
+};
+
+choicesListEl.addEventListener("click", checkAnswer);
+
+function nQuestion () {
+    questionDeck++;
+
+     if (questionDeck >= questions.length) {
+          clearInterval(timeKeeper);
+          quizFinished();
+     } else {
+          quizSet();
+     }
+}
 
