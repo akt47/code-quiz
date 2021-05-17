@@ -1,11 +1,25 @@
 #high-score-list {
     float: left;
     padding: 10px;
+    text-decoration: none;
+    color: #bd60e7; 
+    font-size: medium;
+    font-weight: 400;
+}
+
+
+#high-score-list:hover {
+    color: #351c75;
 }
 
 #displayTimer {
     float: right; 
     padding: 10px;
+    text-decoration: none;
+    color: black; 
+    font-size: large;
+    font-weight: 400;
+
 }
 
 #container{
@@ -21,7 +35,7 @@
 
 h1 {
     text-align: center;
-    font-weight: bold;
+   
 }
 
 #runTimer {
@@ -83,3 +97,23 @@ li button:hover {
     color: #afafaf;
     padding-top: 8px;
 }
+
+#finishDiv {
+    text-align: left;
+    margin: 0 auto;
+}
+
+#finalScore {
+    margin: 5px 0 5px 0;
+}
+
+#initials,
+#Submit {
+     margin-left: 10px;
+}
+
+#createLabel {
+    font-size: 1.5rem;
+    padding-top: 1px;
+}
+

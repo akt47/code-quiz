@@ -70,7 +70,7 @@ function quizSet() {
     choicesListEl.innerHTML = "";
 //first question
     var qQuestion = document.createElement("h1");
-   /* qQuestion.setAttribute("class","question");*/
+    qQuestion.setAttribute("class",'question')
     var qText = document.createTextNode(questions[questionDeck].title);
     qQuestion.appendChild(qText);
     document.getElementById("quizDiv").appendChild(qQuestion);
@@ -121,3 +121,56 @@ function nQuestion () {
      }
 }
 
+
+var quizFinished = function () {
+    // clear page
+    choiceResultEl.classList.remove('answerCheck');
+    document.getElementById("quizDiv").innerHTML = "";
+    choicesListEl.innerHTML = "";
+    document.getElementById("resultDisplay").innerHTML = "";
+
+    // create div for styling
+    var divEl = document.createElement("div");
+    divEl.setAttribute("id", "finishDiv");
+
+    document.getElementById("quizDiv").appendChild(divEl);
+
+    // create h1
+    var h1 = document.createElement("h1");
+    h1.setAttribute("id", "allDone");
+    h1.textContent = "All done!";
+    //displays All Done!
+    document.getElementById("finishDiv").appendChild(h1);
+
+    // display score
+    var finalScore = document.createElement("p");
+    finalScore.setAttribute("id", "finalScore");
+    var totalScore = score + timer;
+    finalScore.textContent = "Your final score is " + totalScore;
+    document.getElementById("finishDiv").appendChild(finalScore);
+
+    // inital input
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter your initials: ";
+    document.getElementById("finishDiv").appendChild(createLabel);
+
+    // input
+    var createInput = document.createElement("input");
+    createInput.setAttribute("type", "text");
+    createInput.setAttribute("id", "initials");
+    createInput.textContent = "";
+
+    document.getElementById("finishDiv").appendChild(createInput);
+
+    // submit
+    var createSubmit = document.createElement("button");
+    createSubmit.setAttribute("type", "submit");
+    createSubmit.setAttribute("id", "Submit");
+    createSubmit.setAttribute("class", "btn quiz-start btn-sm");
+    createSubmit.textContent = "Submit";
+
+    document.getElementById("finishDiv").appendChild(createSubmit)}
+
+
+    
