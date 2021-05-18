@@ -167,10 +167,35 @@ var quizFinished = function () {
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
-    createSubmit.setAttribute("class", "btn quiz-start btn-sm");
     createSubmit.textContent = "Submit";
 
-    document.getElementById("finishDiv").appendChild(createSubmit)}
+    document.getElementById("finishDiv").appendChild(createSubmit);
 
 
-    
+    // Event listener to capture initials and local storage for initials and score
+    createSubmit.addEventListener("click", function () {
+        var initials = createInput.value;
+
+        if (initials === null) {
+
+             window.alert("Enter initials");
+
+        } else {
+             var finalScore = {
+                  initials: initials,
+                  score: totalScore
+             }
+             var allScores = localStorage.getItem("allScores");
+             if (allScores === null) {
+                  allScores = [];
+             } else {
+                  allScores = JSON.parse(allScores);
+             }
+             allScores.push(finalScore);
+             var newScore = JSON.stringify(allScores);
+             localStorage.setItem("allScores", newScore);
+             // Travels to final page
+             window.location.replace("./highscore.html");
+        }
+   });
+}

@@ -7,6 +7,12 @@
     font-weight: 400;
 }
 
+#highscore-b {
+width: 400px;
+}
+
+
+
 
 #high-score-list:hover {
     color: #351c75;
@@ -14,7 +20,6 @@
 
 #displayTimer {
     float: right; 
-    padding: 10px;
     text-decoration: none;
     color: black; 
     font-size: large;
@@ -107,13 +112,58 @@ li button:hover {
     margin: 5px 0 5px 0;
 }
 
-#initials,
+#initials {
+    margin-left: 10px;
+}
 #Submit {
-     margin-left: 10px;
+    border-radius: 10px;
+    background-color: darkmagenta;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 30%;
+    font-size: 20px;
+    color: white;
 }
 
 #createLabel {
     font-size: 1.5rem;
     padding-top: 1px;
+}
+
+#goBack {
+    background-color: darkmagenta;
+    position: relative;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: white;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#clear {
+    background-color: darkmagenta;
+    position: relative;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: white;
+    width: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.highScore {
+    list-style: none;
+    text-align: center;
+    
+}
+
+#createLi {
+    background-color: #d6bdd6;
+    list-style: lower-roman;
+    padding: 10px;
+    display: list-item;
+    margin-right: 20px ;
 }
 
